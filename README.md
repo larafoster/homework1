@@ -1,8 +1,7 @@
 # homework1
 Refactoring a website.
 
-## User Story
-
+Assignment:
 ```
 AS A marketing agency
 I WANT a codebase that follows accessibility standards
@@ -13,6 +12,8 @@ This project can be found on github:
 * [Github Pages]( https://larafoster.github.io/homework1/)
  
 
+ ```
 Screenshot of mobile view:
 
 ![](./assets/images/mobile-view.png)
+=======
