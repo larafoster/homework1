@@ -10,5 +10,5 @@ SO THAT our own site is optimized for search engines
 ```
 Screenshot of mobile view:
 
-![](.assets/images/mobile-view.png)
+![](./assets/images/mobile-view.png)
 =======
