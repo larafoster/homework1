@@ -1,183 +1,138 @@
-/* I removed most of the original css and replaced it with semantic HTML elements and flexbox  */
+/* Applies styling to all elements on the page */
 
 * {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-.float-left {
-    float: left;
-    margin-right: 25px;
+/* Element Styles */
+
+a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
-.float-right {
-    float: right;
-    margin-left: 25px;
-}
-
-.wrapper {
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.wrapper>* {
-    flex: 1 100%;
+body {
+  background-color: #d9dcd6;
 }
 
 header {
-    background: #2663a2;
-    color: white;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 28px;
-    height: 10vh;
+  padding: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  background-color: #2a607c;
+  color: #ffffff;
 }
 
 header h1 {
-    padding: 20px 0 0 20px;
+  display: inline-block;
+  font-size: 48px;
 }
 
-.box {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+header h1 .seo {
+  color: #d9dcd6;
 }
 
-article {
-    text-align: left;
-    background: deepskyblue;
-    justify-content: space-evenly;
+header nav {
+  padding-top: 15px;
+  margin-right: 20px;
+  float: right;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
 }
 
-article img {
-    max-height: 200px;
+header nav ul {
+  list-style-type: none;
 }
 
-section {
-    border: 10px solid white;
-    height: 33vh;
-    padding: 20px;
-    display: flex;
-    align-content: center;
+header nav ul li {
+  display: inline-block;
+  margin-left: 25px;
 }
 
-aside {
-    background: cornflowerblue;
-    border: 10px solid white;
-}
-
-aside h3 {
-    text-align: center;
-    color: white;
-    padding-top: 50px;
-}
-
-aside p {
-    padding: 20px;
-}
-
-aside img {
-    display: block;
-    margin: 0px auto;
-    max-width: 150px;
-}
-
-/* I moved the navigation out of the header to give my mobile presentation a better view (block) 
-I used a class here instead of nav because it's what i'm used to, but could have used <nav> instead. */
-
-.navigation {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-end;
-    list-style: none;
-    margin: 0;
-    background: #376da5;
-}
-
-.navigation a {
-    text-decoration: none;
-    display: block;
-    padding: 1em;
-    color: white;
-}
-
-/* I added opacity to hover links to indicate that something happens if you click. */
-
-.navigation a:hover {
-    opacity: .6;
-    ;
-}
-
-/* the hero image was really really big, so i made changed the height so it doesn't take over the entire page  */
-
-.hero {
-    width: 100%;
-    height: 60vh;
-    margin-bottom: 25px;
-    background-image: url("../images/digital-marketing-meeting.jpg");
-    /* Position and center the image to scale nicely on all screens */
-    background-repeat: no-repeat;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    flex-shrink: 3;
+p {
+  font-size: 16px;
 }
 
 footer {
-    background: #2663a2;
-    color: white;
-    text-align: center;
+  padding: 30px;
+  clear: both;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  text-align: center;
 }
 
-@media all and (max-width: 800px) {
-    .navigation {
-        justify-content: space-around;
-    }
-    /* I hid the hero image on smaller devices because it was more of a distraction  */
-    .hero {
-        display: none;
-    }
-    header h1 {
-        text-align: center;
-    }
-    article {
-        flex: 1;
-        height: auto;
-    }
-    /* I added a div around the article and aside which made it easier for me to apply different flex elements based on view.  */
-    .box {
-        flex-wrap: wrap;
-    }
-    header {
-        padding-bottom: 15px;
-    }
+footer h2 {
+  font-size: 20px;
 }
 
-@media all and (max-width: 600px) {
-    /* I changed the navigation from inline to block for smaller devices and centered the content */
-    .navigation {
-        flex-flow: column wrap;
-        padding: 0;
-    }
-    .navigation a {
-        text-align: center;
-        padding: 10px;
-        border-top: 1px solid rgba(255, 255, 255, 0.3);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    }
-    .navigation li:last-of-type a {
-        border-bottom: none;
-    }
+/* Class styles */
+
+.benefit {
+  margin-bottom: 32px;
+  color: #ffffff;
 }
 
-/* I tried focusing on mobile first, but still struggle with it. I added the flex order to make sure that the aside came before article, but it may not really be needed in this case. */
+.benefit h3 {
+  margin-bottom: 10px;
+  text-align: center;
+}
 
-@media all and (min-width: 320px) {
-    article {
-        order: 1;
-    }
-    aside {
-        order: 2;
-    }
-    footer {
-        order: 3;
-    }
+.benefit img {
+  display: block;
+  margin: 10px auto;
+  max-width: 150px;
+}
+
+.benefits {
+  margin-right: 20px;
+  padding: 20px;
+  clear: both;
+  float: right;
+  width: 20%;
+  height: 100%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #2589bd;
+}
+
+.float-left {
+  float: left;
+  margin-right: 25px;
+}
+
+.float-right {
+  float: right;
+  margin-left: 25px;
+}
+
+.hero {
+  height: 800px;
+  width: 100%;
+  margin-bottom: 25px;
+  background-image: url("../images/digital-marketing-meeting.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.service {
+  margin-bottom: 20px;
+  padding: 50px;
+  height: 300px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #0072bb;
+  color: #ffffff;
+}
+
+.service img {
+  max-height: 200px;
+}
+
+.service h2 {
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.services {
+  width: 75%;
+  display: inline-block;
+  margin-left: 20px;
 }
